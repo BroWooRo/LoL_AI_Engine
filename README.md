@@ -1,2 +1,4 @@
 # LoL_AI_Engine
-Combining League of Legends and machine learning to create an engine for players
+
+My Engine will connect a machine learning model learned from 180,000 League of Legends games, 
+and access it with input user to predict their game win/loss
