@@ -16,6 +16,7 @@ class GetGameData(object):
     .generate_position(list of names)
     .generate_masteries(list of names)
     .generate_match_data(list of names)
+    .predict_my_wins(list of names)
 
     '''
 
@@ -121,6 +122,11 @@ class GetGameData(object):
         return pd.DataFrame(history_list)
 
     def predict_my_wins(self, names):
+    	'''
+    	Fetches user data from Riot API server, connects it with trained model to make predictions
+    	Returns prediction numpy array
+
+    	'''
         print('Fetching data...')
         hist = self.generate_player_history(names) # this is a dataframe of player history
 
@@ -173,4 +179,4 @@ class GetGameData(object):
         print('predict_probas = ', pred_proba)
         print('r2 score = ', r2_score)
 
-        return feed
+        return preds
